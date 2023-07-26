@@ -3,11 +3,40 @@ h1 {
     color: rgb(35, 33, 47);
 }
 
-p {
-    text-align: center;
-    color: rgb(92, 235, 116);
+#testImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-body {
-    background-color: rgb(91, 103, 151);
+.topnav {
+    color: rgb(83, 83, 161);
+    text-align: center;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#linkedImage {
+    border-radius: 50%;
+    width: 75%;
+}
+
+#gitImage {
+    border-radius: 50%;
+    width: 75%;
+}
+
+#resumeImage {
+    border-radius: 50%;
+    width: 75%;
 }
