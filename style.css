@@ -3,15 +3,10 @@ h1 {
     color: rgb(35, 33, 47);
 }
 
-#testImage {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .topnav {
     color: rgb(83, 83, 161);
     text-align: center;
+    padding: 25px 50px;
 }
 
 .column {
@@ -26,17 +21,17 @@ h1 {
     clear: both;
 }
 
-#linkedImage {
-    border-radius: 50%;
-    width: 75%;
+.displayImage {
+    max-width: 75%;
+    height: auto;
+    border-radius: 75%;
 }
 
-#gitImage {
-    border-radius: 50%;
-    width: 75%;
+#mealPic {
+    width: 50%;
+    height: 50%;
 }
 
-#resumeImage {
-    border-radius: 50%;
-    width: 75%;
+#footer {
+    text-align: center;
 }
