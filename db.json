@@ -1,0 +1,34 @@
+{
+    "jokes": [
+        {
+            "id": 1,
+            "genre": "animals",
+            "joke": "Why did the zoo hire the koala? He met the koala-fications.",
+            "hilarity": 4
+        },
+        {
+            "id": 2,
+            "genre": "aquatic",
+            "joke": "What's a knights' favorite fish? Swordfish.",
+            "hilarity": 2
+        },
+        {
+            "id": 3,
+            "genre": "animals",
+            "joke": "Why don't seagulls fly over the bay? If they did, they'd be bay-gulls.",
+            "hilarity": 5
+        },
+        {
+            "id": 4,
+            "genre": "aquatic",
+            "joke": "What do you call an alligator in a vest? An investigator.",
+            "hilarity": 4
+        },
+        {
+            "id": 5,
+            "genre": "animals",
+            "joke": "Why should you play poker on safari? There's too many cheetahs.",
+            "hilarity": 3
+        }
+    ]
+}
