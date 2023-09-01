@@ -11,8 +11,11 @@ function fetchMeal() {
 
 function displayMeal(data) {
     let mealName = data.meals[0].strMeal;
+    let mealSource = data.meals[0].strSource;
     let name = document.getElementById('mealName');
+    let source = document.getElementById('mealSource');
     name.append(mealName);
+    source.append(mealSource);
     mealPic.src = data.meals[0].strMealThumb;
 }
 
@@ -21,6 +24,7 @@ function countUp() {
     perSecond = setInterval(function() {counter.innerText++}, 1000)
 }
 
+//REF DB.JSON FILE???
 function fetchJoke() {
     console.log("hi")
     fetch ("http://localhost:3000/jokes")
@@ -39,7 +43,6 @@ darkMode.addEventListener('click', iAmBatman)
 
  function iAmBatman() {
     document.body.style.background = "black";
-    //document.getElementById("joke").style.color = 'white';
     document.querySelectorAll("*").forEach(element => {
         element.style.color = "gainsboro";
       });
@@ -49,10 +52,10 @@ lightMode.addEventListener('click', hereComesTheSun)
 
  function hereComesTheSun() {
     document.body.style.background = "white";
-    //document.getElementById("joke").style.color = 'white';
     document.querySelectorAll("*").forEach(element => {
         element.style.color = "black";
       });
+    
 }
 
 function allowDrop(ev) {
