@@ -24,16 +24,15 @@ function countUp() {
     perSecond = setInterval(function() {counter.innerText++}, 1000)
 }
 
-//REF DB.JSON FILE???
+//How do I make this accessible to public users? => w/o running watch json
 function fetchJoke() {
-    console.log("hi")
     fetch ("http://localhost:3000/jokes")
-        .then ((res) => res.json())
+        .then (res => res.json())
         .then ((data) => displayJoke(data))
 }
 
 function displayJoke(data) {
-    console.log(data[0]["joke"])
+    console.log(data)
     let joke = document.getElementById('joke')
     let randomNmbr = Math.floor(Math.random() * 5)
     joke.textContent = data[randomNmbr]['joke']
