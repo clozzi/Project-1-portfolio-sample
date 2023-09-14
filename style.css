@@ -9,6 +9,14 @@ h1 {
     padding: 25px 50px;
 }
 
+#darkMode {
+    cursor: pointer;
+}
+
+#lightMode {
+    cursor: pointer;
+}
+
 .column {
     float: left;
     width: 33.33%;
@@ -32,16 +40,8 @@ h1 {
     height: 15%;
 }
 
-#footer {
+#mealOTD {
     text-align: center;
-}
-
-#darkMode {
-    cursor: pointer;
-}
-
-#lightMode {
-    cursor: pointer;
 }
 
 #firstChance, #secondChance, #thirdChance, #fourthChance, #fifthChance {
@@ -51,6 +51,6 @@ h1 {
     border: 2px solid black;
 }
 
-#mealOTD {
+#footer {
     text-align: center;
 }
