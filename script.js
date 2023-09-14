@@ -24,7 +24,6 @@ function countUp() {
     perSecond = setInterval(function() {counter.innerText++}, 1000)
 }
 
-//How do I make this accessible to public users? => w/o running watch json
 function fetchJoke() {
     fetch ("http://localhost:3000/jokes")
         .then (res => res.json())
