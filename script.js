@@ -29,6 +29,20 @@ function displayJoke(data) {
     joke.textContent = data[randomNmbr]['joke']
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const luckyArray = [];
+    for (let i = 0; i < 5; i++) {
+        luckyArray.push((Math.random() * 10))
+    }
+
+})
+//switch to random array of lucky numbers created by math.random(create array of 1s) ??? 
+function luckyNumber() {
+    let btnDiv = document.getElementById('luckyNoDiv');
+    let luckyNumber = document.createElement('p');
+    // reduce random array to single number?
+}
+
 document.addEventListener("DOMContentLoaded", fetchMeal());
 function fetchMeal() {
     fetch("https://www.themealdb.com/api/json/v1/1/random.php")
