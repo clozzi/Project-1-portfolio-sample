@@ -38,11 +38,15 @@ function fetchMeal() {
 
 function displayMeal(data) {
     let mealName = data.meals[0].strMeal;
-    let mealSource = data.meals[0].strSource;
+    let mealSource = document.createElement('a');
+    mealSource.href = `${data.meals[0].strSource}`
+    mealSource.textContent = "Get the recipe here!"
     let name = document.getElementById('mealName');
-    let source = document.getElementById('mealSource');
+    let mealDiv = document.getElementById('mealOTD');
+    let lineBreak = document.createElement('br');
+    mealDiv.append(lineBreak);
     name.append(mealName);
-    source.append(mealSource);
+    mealDiv.append(mealSource);
     mealPic.src = data.meals[0].strMealThumb;
 }
 
