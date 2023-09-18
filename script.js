@@ -68,19 +68,52 @@ function fetchMeal() {
     });
 }
 
-function allowDrop(ev) {
-    ev.preventDefault();
+function allowDrop(event) {
+    event.preventDefault();
 }
 
-function drag(ev) {
-    ev.dataTransfer.setData('text', ev.target.id)
+function drag(event) {
+    event.dataTransfer.setData('text', event.target.id)
 }
 
-function drop(ev) {
-    ev.preventDefault();
-    let data = ev.dataTransfer.getData('text')
-    ev.target.appendChild(document.getElementById(data))
+function drop(event) {
+    event.preventDefault();
+    let data = event.dataTransfer.getData('text')
+    event.target.appendChild(document.getElementById(data))
 }
+
+const slothFacts = [
+    {
+      id: 1,
+      category: "diet",
+      fact: "Sloths are primarily folivores, feeding mostly on leaves, fruits and sap of various trees. They have a large and efficient multi-chambered stomach that helps with digesting tough, fibrous leaves."  
+    },
+    {
+        id: 2,
+        category: "habitat",
+        fact: "All modern day sloths are tree-dwelling, suspensorial mammals, spending most of their lives hanging motionless or slowly moving between tree branches using their long, curved claws. Everything from feeding, sleeping, resting to mating and giving birth happens in the trees."
+    },
+    {
+        id: 3,
+        category: "habitat",
+        fact: "Life can be difficult on the ground for sloths since their long clawed arms and shorter, weak hind legs make it impossible to stand on all fours. However, they are surprisingly strong swimmers. Sloth species living near mangroves or rivers sometimes drop into water bodies and swim large distances (in a short amount of time) when searching for potential mating partners or seeking new territory."
+    },
+    {
+        id: 4,
+        category: "miscellaneous",
+        fact: "Sloths have been around for 65.5 million years—just before dinosaurs disappeared—shows that a slow-paced lifestyle can be a good survival strategy in the wild."
+    },
+    {
+        id: 5,
+        category: "diet",
+        fact: "The extinct giant ground sloths were some of the only mammals that had digestive systems large enough to process the huge avocado seeds whole. They feasted on the fruit and then dispersed the seeds far and wide. So without sloths, there would be no avocados!"
+    }
+]
+
+document.getElementById('thirdChance').addEventListener('drop', () => {
+    let randomNmbr = Math.floor(Math.random() * 4)
+    alert (slothFacts[`${randomNmbr}`]["fact"])
+})
 
 document.addEventListener('DOMContentLoaded', () => {
     perSecond = setInterval(function() {counter.innerText++}, 1000)
